@@ -311,7 +311,7 @@ This polymarket trading bot is licensed under the MIT License - see [`LICENSE`](
 
 **Built with ❤️ for the Polymarket community**
 
-Contact: https://x.com/Giordanopsouza 🇧🇷
+Contact: https://t.me/sniperun
 
 *This polymarket copy trading bot helps traders automate their prediction market strategies. Star ⭐ the repo to support development!*
 

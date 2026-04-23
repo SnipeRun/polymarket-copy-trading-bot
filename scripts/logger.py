@@ -19,9 +19,10 @@ def setup_logger(name="polymarket_bot"):
     logger.setLevel(log_level)
 
     if not logger.handlers:
-        formatter = logging.Formatter(
-            '%(asctime)s | %(levelname)-8s | %(name)s | %(message)s',
-            datefmt='%Y-%m-%d %H:%M:%S'
+            formatter = logging.Formatter(
+                '%(asctime)s.%(msecs)03d | %(levelname)-8s | %(name)s | %(message)s',
+                datefmt='%Y-%m-%d %H:%M:%S'
+            )
         )
 
         console_handler = logging.StreamHandler(sys.stdout)

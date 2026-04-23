@@ -305,125 +305,27 @@ Contributions to this **polymarket-copy-trading-bot** are welcome!
 - 🔧 Submit pull requests
 - ⭐ Star the repo if you find it useful
 
+### Roadmap
 
-## ☁️ Cloud Enterprise Version — [snipe.run](https://snipe.run)
+- [ ] Web dashboard for monitoring
+- [ ] Advanced risk management features
+- [ ] Telegram/Discord notifications
 
-The free code in this repo is a starting point. **[snipe.run](https://snipe.run)** is what it became after two years of live trading on Polymarket: a **production-grade managed platform** built for traders who want to capture edge, not babysit a Python script.
-
-**Fully hosted. Zero install. Live in under 2 minutes.**
-
-👉 **[Start at snipe.run](https://snipe.run)** — sign in with Google or MetaMask, set your trading wallet, go live instantly.
-
----
-
-### ⚡ Built For Speed. Engineered For Profit.
-
-- **Sub-200ms execution** from trader signal → your order on the book. Direct WebSocket pipeline. No polling, no lag, no "where did the edge go".
-- **Orders on the book in under 3 seconds** total — from the moment the copied trader clicks Buy to the moment you're filled.
-- **Always-on, always-connected.** 24/7 production uptime on dedicated infrastructure. Your laptop can be closed, asleep, or in the other room.
-- **Zero dropped signals.** No crashed Python processes. No dead WebSockets. No "my bot stopped last Tuesday and I didn't notice until Friday". If the trader moves, you move.
-
-> On Polymarket, the difference between 200ms and 3 seconds is the difference between buying at $0.45 and buying at $0.72. Speed *is* the edge.
-
----
-
-### 🎯 Smart Exit Engine — 7 Layers Of Automated Profit Protection
-
-Self-hosted bots leave you to figure out exits yourself. snipe.run has a full exit stack running on every position, every millisecond:
-
-- **Instant profit ladder** — three take-profit orders placed 3 seconds after every BUY, so gains start locking in the moment price moves up.
-- **Trailing stops** — locks in profits when price drops 6% from peak, never below +2%. You'll never give back a winner.
-- **Winner-lock** — automatically sells near-certain winners (bid ≥ $0.85) to free up capital for the next signal.
-- **Time-based exit** — closes stale positions sitting in the green for too long.
-- **Loss-cut protection** — hard stop-out on bad trades after -35%.
-- **Follow-sell mirroring** — when the trader you're copying exits, you exit proportionally, automatically.
-- **Cost-basis guard** — automated exits never sell below cost unless loss-cut explicitly fires. Your bot won't panic-sell a dip.
-
----
-
-### 🧠 Institutional Risk Management
-
-- **Automatic tier scaling** — sizing, max price, and exposure caps scale with your bankroll. Start small, scale to institutional without touching a config file.
-- **Event & trader exposure caps** — never over-concentrate on one trader or one market.
-- **Active vs. passive trader profiles** — tailored exit strategies for whale buy-and-holders vs. fast-moving active traders. You don't have to figure this out.
-- **Re-buy cooldowns** — prevents the "get stopped out, instantly re-enter, get stopped out again" death spiral.
-- **Cash reserve protection** — always keeps dry powder for the next signal, even when you're deployed.
-
----
-
-### 💰 Battle-Tested. Live. Proven.
-
-This isn't a GitHub demo. This isn't a weekend project. This is a production trading engine with serious live volume on Polymarket.
-
-- **Millions of dollars of live Polymarket volume** already traded through this platform.
-- **Running 24/7 for over two years** — every edge case, every market crash, every Polymarket API change, already survived.
-- **Continuously refined** by watching real P/L on real markets. The exit rules, the sizing tiers, the tier thresholds — every one was tuned on live results, not in a backtest.
-- **No "it works on my machine"** — the features you see here have been stress-tested under real market conditions, real network failures, real trader behavior.
-
----
-
-### 📊 Professional Live Dashboard
-
-Watch your bot work in real time. No terminal, no `tail -f logs`, no guessing.
-
-- **Live P/L chart** with growth tracking and drawdown markers
-- **Open positions** with live peak tracking, armed-trail status, and sellable value
-- **Recent closes feed** tagged with the exact exit reason (trail, time, loss-cut, follow-sell, manual)
-- **Live terminal stream** — watch every decision the bot makes, in real time
-- **Hero metrics** — portfolio value, today's P/L, win rate, open / closed counts
-- **Live Polymarket leaderboard** — find the next trader to copy without leaving the dashboard
-
----
-
-### 🤖 AI Co-Pilot — Like A Hedge-Fund Analyst On Every Trade
-
-The AI isn't a gimmick. It reads every position with full context — your entry, your size, the market, the time decay, the concentration — and gives you a real call.
-
-- **Every new position is reviewed automatically** the moment it opens — flags overextension, concentration risk, stale positions, and decaying edges before they cost you money.
-- **Chat with your positions** — ask *"should I hold this one?"* or *"is this trader still hot?"* and get a decision with reasoning. Not boilerplate. Not disclaimers.
-- **Assessment history** per position — see every read the AI made, stage by stage, so you can learn its patterns and trust (or override) its calls.
-- **Pattern-spotting across your stack** — the AI catches correlations you can't hold in your head. "You're 40% into one event — is that intentional?"
-- **Running 24/7 in the background** — even when you're asleep, your positions are being reviewed.
-
----
-
-### 📱 Telegram Integration
-
-- **Real-time push alerts** on every trade — BUY, exit, tier change, stop-out. Know what your bot did before you open your laptop.
-- **Remote commands** — check status, positions, cash, or kill-switch the bot from anywhere.
-- **Periodic P/L summaries** delivered to your chat.
-
----
-
-### 🚀 Zero Maintenance
-
-- **No server to rent.** No cron jobs, no PM2, no `systemctl restart` at 2am.
-- **No Python, no CLI, no Supabase, no `.env` file.**
-- **Continuous updates** — new features, better strategies, security patches, all shipped automatically.
-- **Priority support** on Telegram — real humans, real response times.
-
----
-
-### The Honest Comparison
-
-| | Free (this repo) | snipe.run |
-|---|---|---|
-| Execution speed | 2-5s polling | **<200ms WebSocket** |
-| Production track record | You're the guinea pig | **Years of live volume** |
-| Exit strategy | Write it yourself | **7-layer engine, done** |
-| Tier-scaling & risk caps | — | **Automatic, bankroll-aware** |
-| Live dashboard | Build your own | **Production-grade, included** |
-| Uptime | Your laptop | **24/7 dedicated infra** |
-| AI co-pilot | — | **Every position, every trade** |
-| Push alerts | — | **Telegram, real-time** |
-| Setup time | Hours (if you know Python) | **Under 2 minutes** |
-| Maintenance | You | **Zero** |
-
----
-
-👉 **[Start at snipe.run](https://snipe.run)** — zero install, zero friction, zero risk to try.
-
-Support: [t.me/sniperun](https://t.me/sniperun)
+> ### ✅ Want the improved, production-ready version? → **[snipe.run](https://snipe.run)**
+>
+> **[snipe.run](https://snipe.run) is the improved, production-ready version of this bot** — same roots, rebuilt for real trading. Very fast. Very accurate. Zero installation. Every roadmap item above is already shipped, plus a lot the free version never will be:
+>
+> - ✅ **Profit-tested & reliable** — live on Polymarket for over two years, consistently profitable, zero missed signals, zero downtime
+> - ✅ **Web dashboard** — production-grade, live P/L chart, open positions, recent closes, real-time log stream
+> - ✅ **Advanced risk management** — automatic bankroll-tier scaling, event & trader exposure caps, re-buy cooldowns, cost-basis guard
+> - ✅ **Telegram notifications** — real-time push on every BUY, every exit, every move
+> - ⚡ **Blazing fast — sub-200ms WebSocket execution** vs. 2-5s polling in the free version
+> - 🎯 **Surgically accurate — 7-layer automated exit engine** — trailing stops, winner-locks, time exits, loss cuts, follow-sells, profit ladders
+> - 🤖 **AI co-pilot** — reviews every position the moment it opens, flags risk, answers "should I hold?"
+> - 💰 **Battle-tested** — millions in live Polymarket volume, running 24/7 for over two years
+> - 🚀 **Zero installation, zero maintenance** — no server, no CLI, no Python, no `.env` file. Sign in, set wallet, go live in under 2 minutes.
+>
+> 👉 **[Start at snipe.run](https://snipe.run)** — fast. accurate. no install. Support: [t.me/sniperun](https://t.me/sniperun)
 
 ## 📄 License
 

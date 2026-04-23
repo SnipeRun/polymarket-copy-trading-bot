@@ -6,6 +6,14 @@
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![Polymarket](https://img.shields.io/badge/Polymarket-Compatible-green.svg)](https://polymarket.com/)
 
+> ## ☁️ Prefer a Hosted, No-Install Version? → **[snipe.run](https://snipe.run)**
+>
+> **[snipe.run](https://snipe.run)** is the **cloud enterprise version** of this bot — fully managed, zero installation, no server to run, no CLI. Sign in with **Google or MetaMask**, set your trading wallet, and start copying traders **in under 2 minutes**.
+>
+> The managed platform ships everything in this repo **plus** a live dashboard, multi-profile accounts, encrypted key storage, 2FA, sub-200ms WebSocket trail-stops, an AI co-pilot, and Telegram alerts. See the full list in the [**Cloud Enterprise Version**](#️-cloud-enterprise-version--sniperun) section below.
+>
+> 👉 **[Start free at snipe.run](https://snipe.run)** — no installation, no config, no gas fumbling.
+
 ## 📋 Table of Contents
 
 - [About This Polymarket Copy Trading Bot](#about-this-polymarket-copy-trading-bot)
@@ -285,11 +293,80 @@ Contributions to this **polymarket-copy-trading-bot** are welcome!
 - ⭐ Star the repo if you find it useful
 
 
-### Roadmap
+## ☁️ Cloud Enterprise Version — [snipe.run](https://snipe.run)
 
-- [ ] Web dashboard for monitoring
-- [ ] Advanced risk management features
-- [ ] Telegram/Discord notifications
+Don't want to babysit a Python process, configure Supabase, hold a private key on disk, or rebuild a dashboard yourself? The **cloud enterprise version** of this bot is live at **[snipe.run](https://snipe.run)** — production-hardened, running 24/7 on Polymarket, no installation required.
+
+**👉 [Start free at snipe.run](https://snipe.run)** — sign in with Google or MetaMask, set your trading wallet, go live in under 2 minutes. No server, no CLI, no Supabase setup.
+
+### Everything in the free version, plus:
+
+#### 🔐 Security & Key Management
+- **Google OAuth** or **MetaMask SIWE** sign-in — no password to forget
+- **AES-GCM encrypted private keys** with per-profile HKDF subkeys — the master key lives off-database, so a full DB dump cannot decrypt your keys
+- **TOTP 2FA** (Google Authenticator / Authy) with recovery codes
+- **On-demand fresh-challenge 2FA** for sensitive actions (key entry, settings changes) — re-prompts even if you're logged in
+- **Full audit log** on every security-sensitive action
+
+#### ⚡ Production-Grade Trading Engine
+- **Sub-200ms WebSocket trail-stops** (vs. poll-based in the free version) — reacts to price moves in milliseconds, not seconds
+- **Instant ladder**: 3-tier partial profit-taking SELL orders placed 3 seconds after every BUY (+5¢ → 50%, +15¢ → 30%, +32¢ → 20%)
+- **Multi-rule exit stack**:
+  - Bid-85 winner-lock on near-certain outcomes
+  - Armed trail drop (6% from peak, 2% floor — never locks a loss)
+  - Time exit (4h+ in profit)
+  - Loss cut (-35% after 10min) with cost-basis bypass
+- **Active / passive trader modes** — full exit stack for whale buy-and-forget traders, lean stack for active traders who manage their own exits
+- **Proportional follow-sell** when the copied trader exits, with dust guards and automatic full-close upgrade when they're exiting ≥90%
+- **Cost-basis guard** — automated paths cannot sell below cost unless loss-cut explicitly fires
+- **Automatic tier tuning** — sizing, max price, event-exposure cap, and stop-loss all scale with your bankroll (T1 at <$1K through T6 at $200K+)
+
+#### 👥 Multi-Profile Accounts
+- Up to **5 isolated trading profiles** per account
+- Per-profile **filesystem isolation** — separate SQLite DB, AI memory, systemd process tree
+- Per-profile **wallet, sizing, risk, and trader roster**
+- One-click **profile switcher** + **default profile** + per-profile **start / stop**
+
+#### 📊 Live Dashboard
+- Real-time **portfolio chart** with growth tracking + drawdown markers
+- **Open-position monitor** showing armed-trail state, peak, and sellable value
+- **Recent-closes feed** with close-reason attribution (trail, time, loss-cut, follow-sell, manual)
+- **Live terminal log stream** via SSE — watch the bot think in real time
+- **Hero metrics**: portfolio value, today's P/L, open count, closed count
+- **Network latency** monitor for CLOB API and RPC
+- **Live Polymarket leaderboard** integration — find new traders to copy without leaving the dashboard
+
+#### 🗂️ Roster & Trader Management
+- **Click-to-add** traders with one-tap active/passive type toggle
+- Per-trader **portfolio value** and **your exposure** at a glance
+- **One-click enable / disable** (no restart required)
+- **Re-buy cooldown** to prevent instant re-entry after a stop-out
+
+#### 🤖 AI Co-Pilot ($30/mo add-on)
+- **Claude Opus 4.7** position assessor with full P/L + cost-basis context
+- **Automatic position reviews** on every new BUY — the AI flags overextension, concentration, and time-decay risk
+- **Chat interface** — ask "is this worth holding?" and get a decision with reasoning
+- **Per-position assessment history**
+
+#### 📱 Notifications
+- **Telegram bot** with allowlisted chat IDs
+- Commands: `/status`, `/positions`, `/cash`, `/tier`, `/stop_all`, `/start_all`
+- Event push — every BUY, every auto-sell, every tier change
+- **Periodic P/L summaries** (configurable interval)
+
+#### 🧾 Billing & Transparency
+- **$500 USDC / year** base subscription (on-chain, Polygon)
+- **10% fee on net realized profit** — automated monthly settlement, visible ledger
+- **Transactions page** — every payment, every fee, every on-chain tx hash
+- **Fee waiver** if you ended the month in the red (auto-computed)
+
+#### 🛠️ Admin Tooling (for teams)
+- Full user / profile / billing / audit views
+- Goodwill fee waivers + dispute resolution
+- Per-user AI access grants
+- Live billing-config editor (treasury, price, tolerance)
+
+👉 **Start at [snipe.run](https://snipe.run)** — hassle-free, no install, no gas fumbling. Support at [t.me/sniperun](https://t.me/sniperun).
 
 ## 📄 License
 
@@ -299,6 +376,7 @@ This polymarket trading bot is licensed under the MIT License - see [`LICENSE`](
 
 ## 🔗 Related Resources
 
+- [snipe.run](https://snipe.run) - **Cloud enterprise version of this bot** (no install)
 - [Polymarket](https://polymarket.com/) - Official Polymarket platform
 - [Polymarket Docs](https://docs.polymarket.com/) - API documentation
 - [Supabase](https://supabase.com/) - Database platform
@@ -309,10 +387,8 @@ This polymarket trading bot is licensed under the MIT License - see [`LICENSE`](
 
 **Keywords**: polymarket-copy-trading-bot, polymarket bot, prediction market bot, automated trading bot, polymarket automation, copy trading polymarket, polymarket mirror trading, crypto prediction markets
 
-**Built with ❤️ for the Polymarket community**
+**Built with ❤️ for the Polymarket community  |  Cloud Enterprise Version: [snipe.run](https://snipe.run)**
 
 Contact: https://t.me/sniperun
 
 *This polymarket copy trading bot helps traders automate their prediction market strategies. Star ⭐ the repo to support development!*
-
-

@@ -6,6 +6,12 @@
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![Polymarket](https://img.shields.io/badge/Polymarket-Compatible-green.svg)](https://polymarket.com/)
 
+<img width="1681" height="1040" alt="Screenshot 2026-04-24 020608" src="https://github.com/user-attachments/assets/c7f61771-03fb-477c-b3cc-853b2cce3e25" />
+
+<img width="1679" height="1039" alt="image" src="https://github.com/user-attachments/assets/31dbc545-901f-4a8a-93d6-88cedb747354" />
+
+<img width="1680" height="1037" alt="image" src="https://github.com/user-attachments/assets/c15807e9-aef4-4883-aabb-0cd58a6f926f" />
+
 > ## ☁️ Skip The Setup → **[snipe.run](https://snipe.run)** — The Cloud Enterprise Version
 >
 > The code in this repo is the **free, minimal, self-hosted version**. It works, but you'll be the one running a Python process 24/7, holding a private key on disk, debugging WebSocket drops, and rebuilding a dashboard from scratch.
